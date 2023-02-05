@@ -7,6 +7,7 @@ import TvShowsScreen from '../screens/TvShows';
 import MoviesScreen from '../screens/Movies';
 import MyListScreen from '../screens/MyList';
 import MovieDetails from '../screens/MovieDetails';
+import WatchScreen from '../screens/WatchScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -50,6 +51,16 @@ export default () => (
       options={{
         animationEnabled: false,
         headerShown: false
+      }}
+    />
+    <Stack.Screen
+      name="WatchScreen"
+      component={WatchScreen}
+      options={{
+        animationEnabled: false,
+        headerShown: false,
+        statusBarStyle: 'dark',
+        headerTransparent: true
       }}
     />
   </Stack.Navigator>

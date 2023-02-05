@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "Expo Netflix",
-    "description": "Netflix: UI Clone with React Native & Expo",
-    "scheme": "netflixclone",
-    "slug": "netflixclone",
+    "name": "Sasta Flix",
+    "description": "SastaFlix: Watch all movies with NO ADS",
+    "scheme": "sastaflix",
+    "slug": "sastaflix",
     "privacy": "public",
     "version": "0.0.2",
     "platforms": ["android", "ios", "web"],
@@ -26,6 +26,14 @@
     "ios": {
       "buildNumber": "0.0.2",
       "supportsTablet": true
-    }
+    },
+    "plugins": [
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "DEFAULT"
+        }
+      ]
+    ]
   }
 }

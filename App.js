@@ -5,8 +5,10 @@ import { func } from './src/constants';
 
 // main navigation stack
 import RootStack from './src/navigation/RootStack';
+import * as NavigationBar from 'expo-navigation-bar';
 
 const App = () => {
+  NavigationBar.setBackgroundColorAsync('#000');
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {

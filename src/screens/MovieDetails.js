@@ -9,13 +9,15 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { colors, gStyle } from '../constants';
-import { useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 // components
 import Header from '../components/Header';
 import { useFetch } from '../hooks/useFetch';
 
 const MovieDetails = () => {
+  const navigation = useNavigation();
+
   const { id, title } = useRoute().params;
 
   const {
@@ -82,13 +84,25 @@ const MovieDetails = () => {
               )}
             </ScrollView>
 
-            <TouchableOpacity
-              activeOpacity={0.5}
-              onPress={() => {}}
-              style={styles.watchButton}
-            >
-              <Text style={styles.watchText}> Watch Now</Text>
-            </TouchableOpacity>
+            {movie.torrents.map((torrent) => (
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  navigation.navigate('WatchScreen', {
+                    id: movie.id,
+                    title: movie.title,
+                    hash: torrent.hash
+                  });
+                }}
+                style={styles.watchButton}
+                key={torrent.url}
+              >
+                <Text style={styles.watchText}>
+                  {' '}
+                  Watch Now {torrent.quality}{' '}
+                </Text>
+              </TouchableOpacity>
+            ))}
           </View>
         )
       )}
@@ -162,8 +176,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 20,
-    marginBottom: 20
+    marginVertical: 10
   },
   watchText: {
     color: colors.white,
