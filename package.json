@@ -22,9 +22,8 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "@react-native-community/masked-view": "0.1.10",
     "@react-native-community/slider": "4.2.1",
-    "@react-native-masked-view/masked-view": "0.2.6",
+    "@react-native-masked-view/masked-view": "^0.2.8",
     "@react-navigation/bottom-tabs": "^6.3.1",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
@@ -32,6 +31,7 @@
     "expo": "^45.0.0",
     "expo-asset": "~8.5.0",
     "expo-av": "~11.2.3",
+    "expo-cli": "^6.2.1",
     "expo-constants": "~13.1.1",
     "expo-device": "~4.2.0",
     "expo-font": "~10.1.0",
@@ -39,6 +39,7 @@
     "expo-screen-orientation": "~4.2.0",
     "expo-splash-screen": "~0.15.1",
     "expo-updates": "~0.13.4",
+    "global": "^4.4.0",
     "http": "^0.0.1-security",
     "path": "^0.12.7",
     "peerflix": "^0.39.0",

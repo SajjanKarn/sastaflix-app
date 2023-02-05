@@ -6,7 +6,11 @@
     "slug": "sastaflix",
     "privacy": "public",
     "version": "0.0.2",
-    "platforms": ["android", "ios", "web"],
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
     "githubUrl": "https://github.com/calebnance/expo-netflix",
     "orientation": "portrait",
     "primaryColor": "#000000",
@@ -19,9 +23,12 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "android": {
-      "versionCode": 2
+      "versionCode": 2,
+      "package": "com.rentide.sastaflix"
     },
     "ios": {
       "buildNumber": "0.0.2",
@@ -34,6 +41,11 @@
           "initialOrientation": "DEFAULT"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a1d632ea-94b1-4474-970a-1dad5da72d2c"
+      }
+    }
   }
 }

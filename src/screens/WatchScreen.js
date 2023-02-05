@@ -5,7 +5,7 @@ import { colors, gStyle } from '../constants';
 import * as ScreenOrientation from 'expo-screen-orientation';
 
 import { STREAMING_API_URL } from '../../config/api';
-import { Video, AVPlaybackStatus } from 'expo-av';
+import { Video } from 'expo-av';
 import * as NavigationBar from 'expo-navigation-bar';
 
 // components
@@ -17,11 +17,11 @@ const WatchScreen = () => {
   const [status, setStatus] = React.useState({});
 
   async function changeScreenOrientation() {
+    // make the navigation bar transparent
+    NavigationBar.setBackgroundColorAsync('#000');
     await ScreenOrientation.lockAsync(
       ScreenOrientation.OrientationLock.LANDSCAPE_LEFT
     );
-    // make the navigation bar transparent
-    NavigationBar.setBackgroundColorAsync('#000');
   }
 
   return (
